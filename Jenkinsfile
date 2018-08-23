@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        NODE_PORT = '6978'
+        node_port = '6978'
       }
       stages {
           stage('Deploy') {
