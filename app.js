@@ -6,7 +6,7 @@
 
 // Load express
 var express = require('express');
-var port = process.env.node_port;
+var port = process.env.NODE_PORT;
 
 // Configure express
 var app = express();
