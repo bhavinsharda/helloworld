@@ -1,9 +1,12 @@
 pipeline {
     agent any
+    environment {
+        NODE_PORT = '6978'
+      }
       stages {
           stage('Deploy') {
             steps {
-                bat '$ NODE_PORT=6978 node ./app.js'
+                bat 'node ./app.js'
             }
         }  
     }
