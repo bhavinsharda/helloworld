@@ -6,6 +6,7 @@ pipeline {
       stages {
           stage('Deploy') {
             steps {
+                bat 'npm install'
                 bat 'node ./app.js'
             }
         }  
