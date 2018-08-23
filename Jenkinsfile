@@ -1,17 +1,14 @@
 pipeline {
     agent any
-    environment {
-        runport = '3000'
-      }
-    stages {
+      stages {
         stage('Build') {
             steps {
-                bat 'npm deploy:3000'
+                bat 'npm install'
             }
         }
         stage('Deploy') {
             steps {
-                bat 'node app.js'
+                bat 'NODE_PORT=6978 node ./app.js'
             }
         }  
     }
